@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Chogea Xavier — Cybersecurity student, Moringa School graduate, pursuing CompTIA Security+, CCNA and ISC2 CC." />
+  <meta name="author" content="Chogea Xavier" />
+  <meta property="og:title" content="whoami — Chogea Xavier" />
+  <meta property="og:description" content="Cybersecurity student | Moringa School Graduate | Security+ · CCNA · ISC2 CC (in progress)" />
+  <meta property="og:type" content="website" />
+  <title>whoami — Chogea Xavier</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Matrix-style animated canvas background -->
+  <canvas id="matrix"></canvas>
+
+  <!-- Terminal boot screen (intro) -->
+  <div id="boot" class="boot">
+    <div class="boot-inner">
+      <p><span class="prompt">$</span> <span id="typed"></span><span class="caret">▊</span></p>
+      <button id="enter" class="enter-btn" hidden>➜ enter</button>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <main id="main" class="hidden">
+
+    <header class="hero">
+      <div class="avatar">
+        <span>CX</span>
+      </div>
+      <h1 class="glitch" data-text="Chogea Xavier">Chogea Xavier</h1>
+      <p class="tagline">
+        <span class="bracket">[</span> cybersecurity student <span class="bracket">]</span>
+      </p>
+      <p class="sub">
+        Moringa School · Cybersecurity Graduate
+      </p>
+
+      <div class="status">
+        <span class="dot"></span> Currently pursuing certifications — available for opportunities
+      </div>
+    </header>
+
+    <!-- whoami command output -->
+    <section class="terminal-card">
+      <div class="card-header">
+        <span class="btn red"></span><span class="btn yellow"></span><span class="btn green"></span>
+        <span class="card-title">~/chogea-xavier — zsh</span>
+      </div>
+      <div class="card-body">
+        <p><span class="prompt">$</span> whoami</p>
+        <p class="out">chogea-xavier</p>
+
+        <p><span class="prompt">$</span> cat profile.json</p>
+        <pre class="out json">{
+  "name": "Chogea Xavier",
+  "role": "Cybersecurity Student",
+  "education": "Moringa School — Cybersecurity Graduate",
+  "focus": [
+    "Blue Team / SOC fundamentals",
+    "Network Security",
+    "Governance, Risk & Compliance"
+  ],
+  "certifications": {
+    "in_progress": [
+      "CompTIA Security+",
+      "Cisco CCNA",
+      "ISC2 Certified in Cybersecurity (CC)"
+    ]
+  },
+  "status": "open to internships & entry-level roles",
+  "contact": "see links below ↓"
+}</pre>
+
+        <p><span class="prompt">$</span> ls certifications/</p>
+        <p class="out">
+          <span class="cert">CompTIA_Security+</span>
+          <span class="cert">CCNA</span>
+          <span class="cert">ISC2_CC</span>
+        </p>
+
+        <p><span class="prompt">$</span> echo $MISSION</p>
+        <p class="out">"Protect, learn, defend. Break it ethically to secure it properly."</p>
+      </div>
+    </section>
+
+    <!-- Certification cards -->
+    <section class="certs-section">
+      <h2>// certification_path</h2>
+      <div class="cert-grid">
+
+        <article class="cert-card">
+          <div class="cert-icon">🛡️</div>
+          <h3>CompTIA Security+</h3>
+          <p>Core security principles, threats, cryptography, identity, risk & architecture.</p>
+          <span class="badge progress">in progress</span>
+        </article>
+
+        <article class="cert-card">
+          <div class="cert-icon">🌐</div>
+          <h3>Cisco CCNA</h3>
+          <p>Routing, switching, network fundamentals, IP services, automation & security basics.</p>
+          <span class="badge progress">in progress</span>
+        </article>
+
+        <article class="cert-card">
+          <div class="cert-icon">🔐</div>
+          <h3>ISC2 (CC)</h3>
+          <p>Certified in Cybersecurity — governance, access control, network & operations security.</p>
+          <span class="badge progress">in progress</span>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Contact — redirects to official apps -->
+    <section class="contact-section">
+      <h2>// contact</h2>
+      <p class="contact-note">Choose a channel — you'll be redirected to the official app.</p>
+
+      <div class="contact-grid">
+        <a class="contact-card whatsapp" href="https://wa.me/254727506526" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon">💬</span>
+          <span class="contact-label">WhatsApp</span>
+          <span class="contact-sub">Open chat</span>
+        </a>
+
+        <a class="contact-card telegram" href="https://t.me/+254727506526" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon">✈️</span>
+          <span class="contact-label">Telegram</span>
+          <span class="contact-sub">Open chat</span>
+        </a>
+
+        <a class="contact-card instagram" href="https://instagram.com/wrld_xavier.01" target="_blank" rel="noopener noreferrer">
+          <span class="contact-icon">📸</span>
+          <span class="contact-label">Instagram</span>
+          <span class="contact-sub">@wrld_xavier.01</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© <span id="year"></span> Chogea Xavier · <span class="cursor">_</span></p>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
